@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TVMA Website Preview — Family Review</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Lato:wght@300;400;700&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lato',sans-serif;background:#F4F1EC;color:#1A2A3A;line-height:1.6}
+
+/* Email wrapper */
+.wrapper{max-width:620px;margin:40px auto;background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.12)}
+
+/* Header */
+.header{background:#1B3A6B;padding:32px 40px;text-align:center}
+.logo-mark{font-family:'Playfair Display',serif;font-weight:900;font-size:24px;color:#C9A84C;border:2px solid #C9A84C;padding:6px 14px;letter-spacing:3px;display:inline-block;margin-bottom:12px}
+.header-title{font-family:'Playfair Display',serif;font-size:13px;color:#B8CFEA;letter-spacing:1px}
+
+/* RWB stripe */
+.stripe{display:flex;height:5px}
+.stripe .r{background:#B22234;flex:1}
+.stripe .w{background:#FFFFFF;flex:1;border-top:1px solid #DDD;border-bottom:1px solid #DDD}
+.stripe .b{background:#3C3B6E;flex:1}
+
+/* Body */
+.body{padding:40px}
+.greeting{font-family:'Playfair Display',serif;font-size:26px;color:#1B3A6B;margin-bottom:6px}
+.greeting em{color:#C9A84C;font-style:italic}
+.intro{font-size:14px;color:#444;line-height:1.8;margin-bottom:28px}
+
+/* Site preview card */
+.preview-card{background:#F8FAFF;border-radius:8px;border:1px solid #D8E4F4;padding:24px;margin-bottom:28px;text-align:center}
+.preview-label{font-family:'Source Code Pro',monospace;font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#C9A020;margin-bottom:8px}
+.preview-url{font-family:'Playfair Display',serif;font-size:20px;color:#1B3A6B;margin-bottom:16px}
+.visit-btn{display:inline-block;background:#C9A84C;color:#1B3A6B;padding:14px 36px;font-weight:700;font-size:14px;border-radius:4px;text-decoration:none;letter-spacing:.5px;font-family:'Lato',sans-serif}
+.visit-btn:hover{background:#DDB95E}
+
+/* Checklist */
+.checklist-title{font-family:'Playfair Display',serif;font-size:18px;color:#1B3A6B;margin-bottom:6px}
+.checklist-sub{font-size:13px;color:#666;margin-bottom:16px}
+.check-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid #F0EDE8}
+.check-item:last-child{border-bottom:none}
+.check-box{width:20px;height:20px;border:2px solid #C9A84C;border-radius:4px;flex-shrink:0;margin-top:2px}
+.check-text{font-size:13px;color:#444;line-height:1.5}
+.check-text strong{color:#1B3A6B;display:block;margin-bottom:2px}
+
+/* Feedback form */
+.feedback-section{background:#1B3A6B;border-radius:8px;padding:24px;margin-top:28px}
+.feedback-title{font-family:'Playfair Display',serif;font-size:18px;color:white;margin-bottom:6px}
+.feedback-sub{font-size:13px;color:#B8CFEA;margin-bottom:20px}
+.form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.form-group label{font-size:11px;font-weight:700;color:#C9A84C;font-family:'Source Code Pro',monospace;text-transform:uppercase;letter-spacing:.5px}
+.form-group input,.form-group select,.form-group textarea{padding:10px 14px;border:1px solid rgba(255,255,255,.2);border-radius:6px;font-size:13px;font-family:'Lato',sans-serif;background:rgba(255,255,255,.08);color:white;outline:none}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.4)}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-group select option{background:#1B3A6B;color:white}
+.star-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px}
+.star-label{font-size:12px;color:#B8CFEA}
+.stars{display:flex;gap:4px}
+.star{font-size:22px;cursor:pointer;color:rgba(255,255,255,.2);transition:color .15s}
+.submit-btn{width:100%;background:#C9A84C;color:#1B3A6B;border:none;padding:13px;font-size:14px;font-weight:700;border-radius:6px;cursor:pointer;font-family:'Lato',sans-serif;letter-spacing:.5px;margin-top:6px}
+.submit-result{display:none;margin-top:12px;padding:12px 16px;border-radius:6px;font-size:13px}
+
+/* Footer */
+.footer{padding:24px 40px;text-align:center;border-top:1px solid #F0EDE8}
+.footer-text{font-size:12px;color:#999;line-height:1.6}
+.footer-sig{font-family:'Playfair Display',serif;font-size:14px;color:#1B3A6B;margin-top:8px}
+.footer-sub{font-size:11px;color:#AAA;font-family:'Source Code Pro',monospace}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-mark">TVMA</div>
+    <div class="header-title">Treasure Valley Music Academy · Family Preview</div>
+  </div>
+  <div class="stripe"><div class="r"></div><div class="w"></div><div class="b"></div></div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <div class="greeting">Hi Janet, <em>Brenda</em> & Melissa!</div>
+    <p class="intro" style="margin-top:12px">
+      I wanted you to be the first to see something I've been working on. After two days of building, 
+      <strong>Treasure Valley Music Academy now has a real website</strong> — built from scratch, 
+      completely custom, live on the internet right now.<br><br>
+      Before I share it with students, parents, and the community, I'd love for you three to take a look 
+      and give me your honest feedback. You know me best — tell me what you really think!
+    </p>
+
+    <!-- Site Preview Card -->
+    <div class="preview-card">
+      <div class="preview-label">Live Website</div>
+      <div class="preview-url">treasurevalleymusicacademy.com</div>
+      <a href="https://treasurevalleymusicacademy.com" target="_blank" class="visit-btn">Visit the Site →</a>
+    </div>
+
+    <!-- Checklist -->
+    <div class="checklist-title">What to look at</div>
+    <div class="checklist-sub">Here are a few specific things I'd love your eyes on:</div>
+
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Hero Section (top of page)</strong>
+        Does the photo look good? Can you read the text clearly? Does it feel professional?
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>On Your Phone</strong>
+        Open the site on your phone. Does it look good on a small screen? Does anything seem off or hard to read?
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>The Learning System Section</strong>
+        Learn → Apply → Listen → Adjust. Does it make sense? Is it clear what TVMA does?
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Community Partners Section</strong>
+        Does the Lopez Accordions section look right? Does it represent Eddie's business well?
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Star Rating Widget</strong>
+        Scroll to "What Our Students Say" — try leaving a rating! Select Spring 2026, pick an instrument, click the stars and submit.
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Contact Form</strong>
+        Scroll to the bottom and fill out the "Questions? We'd love to hear from you" form. Does it work? Do you get a success message?
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Overall Feel</strong>
+        First impression — does it feel like a real nonprofit? Would you trust this organization if you were a parent or funder seeing it for the first time?
+      </div>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="feedback-section">
+      <div class="feedback-title">Your Feedback</div>
+      <div class="feedback-sub">Fill this out after you've explored the site — your honest input means everything.</div>
+
+      <form id="family-feedback" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="9c7cd507-3cec-4244-bdfd-3aa423efb4a4">
+        <input type="hidden" name="subject" value="TVMA Family Preview Feedback">
+        <input type="hidden" name="from_name" value="TVMA Family Review">
+        <input type="checkbox" name="botcheck" style="display:none">
+
+        <div class="form-group">
+          <label>Your Name</label>
+          <select name="reviewer">
+            <option value="">Select...</option>
+            <option value="Janet (Wife)">Janet — Wife</option>
+            <option value="Brenda (Daughter)">Brenda — Daughter</option>
+            <option value="Melissa (Daughter)">Melissa — Daughter</option>
+          </select>
+        </div>
+
+        <!-- Overall Rating -->
+        <div style="margin-bottom:16px">
+          <label style="font-size:11px;font-weight:700;color:#C9A84C;font-family:'Source Code Pro',monospace;text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:10px">Overall Rating</label>
+          <div class="star-row">
+            <span class="star-label">Overall impression of the site</span>
+            <div class="stars" id="stars-overall">
+              <span class="star" data-group="overall" data-val="1">★</span>
+              <span class="star" data-group="overall" data-val="2">★</span>
+              <span class="star" data-group="overall" data-val="3">★</span>
+              <span class="star" data-group="overall" data-val="4">★</span>
+              <span class="star" data-group="overall" data-val="5">★</span>
+            </div>
+          </div>
+          <div class="star-row">
+            <span class="star-label">Looks professional & trustworthy</span>
+            <div class="stars" id="stars-professional">
+              <span class="star" data-group="professional" data-val="1">★</span>
+              <span class="star" data-group="professional" data-val="2">★</span>
+              <span class="star" data-group="professional" data-val="3">★</span>
+              <span class="star" data-group="professional" data-val="4">★</span>
+              <span class="star" data-group="professional" data-val="5">★</span>
+            </div>
+          </div>
+          <div class="star-row">
+            <span class="star-label">Easy to read & navigate</span>
+            <div class="stars" id="stars-usability">
+              <span class="star" data-group="usability" data-val="1">★</span>
+              <span class="star" data-group="usability" data-val="2">★</span>
+              <span class="star" data-group="usability" data-val="3">★</span>
+              <span class="star" data-group="usability" data-val="4">★</span>
+              <span class="star" data-group="usability" data-val="5">★</span>
+            </div>
+          </div>
+          <div class="star-row">
+            <span class="star-label">Looks good on my phone</span>
+            <div class="stars" id="stars-mobile">
+              <span class="star" data-group="mobile" data-val="1">★</span>
+              <span class="star" data-group="mobile" data-val="2">★</span>
+              <span class="star" data-group="mobile" data-val="3">★</span>
+              <span class="star" data-group="mobile" data-val="4">★</span>
+              <span class="star" data-group="mobile" data-val="5">★</span>
+            </div>
+          </div>
+          <input type="hidden" name="rating_overall" id="r-overall">
+          <input type="hidden" name="rating_professional" id="r-professional">
+          <input type="hidden" name="rating_usability" id="r-usability">
+          <input type="hidden" name="rating_mobile" id="r-mobile">
+        </div>
+
+        <div class="form-group">
+          <label>What did you like most?</label>
+          <textarea name="liked_most" placeholder="Tell me what stood out..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>What should be changed or improved?</label>
+          <textarea name="improvements" placeholder="Be honest — I can take it!"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Did everything work? (forms, ratings, links)</label>
+          <select name="everything_works">
+            <option value="">Select...</option>
+            <option value="Yes, everything worked great">Yes, everything worked great</option>
+            <option value="Most things worked">Most things worked</option>
+            <option value="Some things did not work">Some things did not work</option>
+            <option value="Had trouble with several things">Had trouble with several things</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Any other thoughts?</label>
+          <textarea name="other" placeholder="Anything else on your mind..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="family-submit">Send My Feedback →</button>
+        <div class="submit-result" id="family-result"></div>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="stripe"><div class="r"></div><div class="w"></div><div class="b"></div></div>
+  <div class="footer">
+    <div class="footer-text">
+      Thank you for taking the time to review this. Your feedback means more than you know.<br>
+      This is for the students of the Treasure Valley — and it started right here at home.
+    </div>
+    <div class="footer-sig">Harvey S. Torres</div>
+    <div class="footer-sub">Founder & President · Treasure Valley Music Academy · EIN 33-4588365</div>
+  </div>
+
+</div>
+
+<script>
+// Star ratings
+const ratings = {};
+document.querySelectorAll('.stars').forEach(function(group) {
+  group.querySelectorAll('.star').forEach(function(star) {
+    star.addEventListener('mouseover', function() {
+      const val = parseInt(star.dataset.val);
+      group.querySelectorAll('.star').forEach(function(s) {
+        s.style.color = parseInt(s.dataset.val) <= val ? '#C9A84C' : 'rgba(255,255,255,.2)';
+      });
+    });
+    star.addEventListener('mouseleave', function() {
+      const sel = ratings[star.dataset.group] || 0;
+      group.querySelectorAll('.star').forEach(function(s) {
+        s.style.color = parseInt(s.dataset.val) <= sel ? '#C9A84C' : 'rgba(255,255,255,.2)';
+      });
+    });
+    star.addEventListener('click', function() {
+      const g = star.dataset.group;
+      const v = parseInt(star.dataset.val);
+      ratings[g] = v;
+      document.getElementById('r-' + g).value = v;
+      group.querySelectorAll('.star').forEach(function(s) {
+        s.style.color = parseInt(s.dataset.val) <= v ? '#C9A84C' : 'rgba(255,255,255,.2)';
+      });
+    });
+  });
+});
+
+// Form submit
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('family-feedback');
+  if(!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('family-submit');
+    var result = document.getElementById('family-result');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    var data = new FormData(form);
+    var obj = {};
+    data.forEach(function(v, k) { obj[k] = v; });
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(obj)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      result.style.display = 'block';
+      if(d.success) {
+        result.style.background = 'rgba(45,122,79,.3)';
+        result.style.color = '#90EE90';
+        result.style.padding = '12px 16px';
+        result.style.borderRadius = '6px';
+        result.innerHTML = '&#10003; Thank you! Your feedback has been sent to Harvey. It means the world!';
+        form.reset();
+        btn.textContent = 'Feedback Sent!';
+      } else {
+        result.style.background = 'rgba(204,51,0,.3)';
+        result.style.color = '#FFB3B3';
+        result.style.padding = '12px 16px';
+        result.style.borderRadius = '6px';
+        result.innerHTML = 'Something went wrong. Please email harvey.torres@gmail.com directly.';
+        btn.textContent = 'Send My Feedback →';
+        btn.disabled = false;
+      }
+    })
+    .catch(function() {
+      result.style.display = 'block';
+      result.style.background = 'rgba(204,51,0,.3)';
+      result.style.color = '#FFB3B3';
+      result.style.padding = '12px 16px';
+      result.style.borderRadius = '6px';
+      result.innerHTML = 'Connection error. Please email harvey.torres@gmail.com directly.';
+      btn.textContent = 'Send My Feedback →';
+      btn.disabled = false;
+    });
+  });
+});
+</script>
+
+</body>
+</html>
